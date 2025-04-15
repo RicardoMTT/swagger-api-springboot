@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Clonar proyecto') {
             steps {
-                git 'https://github.com/tu-usuario/tu-repo.git'
+                git 'https://github.com/RicardoMTT/swagger-api-springboot.git'
             }
         }
 
