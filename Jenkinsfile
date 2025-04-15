@@ -19,16 +19,5 @@ pipeline {
             }
         }
 
-        stage('Construir imagen Docker') {
-            steps {
-                sh 'docker build -t mi-app-springboot .'
-            }
-        }
-
-        stage('Levantar contenedores') {
-            steps {
-                sh 'docker-compose up -d'
-            }
-        }
     }
 }
