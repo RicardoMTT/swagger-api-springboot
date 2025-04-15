@@ -15,9 +15,18 @@ pipeline {
 
         stage('Construir app') {
             steps {
-                sh 'mvn clean package -DskipTests'
+                sh 'mvn clean package'
             }
         }
+
+        stage('Ejecutar pruebas') {
+                    steps {
+                        script {
+                            // Ejecutar pruebas (si no las saltas)
+                            sh 'mvn test'
+                        }
+                    }
+                }
 
     }
 }

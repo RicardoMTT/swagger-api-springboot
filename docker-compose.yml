@@ -23,6 +23,7 @@ services:
       - mysql
     networks:
       - app-net
+    restart: always
 
   jenkins:
     image: jenkins/jenkins:lts-jdk21
